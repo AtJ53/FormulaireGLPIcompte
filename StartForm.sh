@@ -7,7 +7,7 @@ DATABASE="GLPIFormulaire"
 HOST="192.168.x.x"
 
 # Requête SQL
-QUERY="SELECT commande FROM trigger_formulaire_rh_entre WHERE DATE(date_execution) = CURDATE();"
+QUERY="SELECT id_de_reponse_au_formulaire FROM trigger_formulaire_rh_entre WHERE DATE(date_execution) = CURDATE();"
 
 # Exécution de la requête et stockage des résultats dans une variable
 RESULTS=$(mysql -h "$HOST" -u "$USER" -p"$PASSWORD" "$DATABASE" -e "$QUERY" -s -N)
