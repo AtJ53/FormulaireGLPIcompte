@@ -15,7 +15,12 @@ RESULTS=$(mysql -h "$HOST" -u "$USER" -p"$PASSWORD" "$DATABASE" -e "$QUERY" -s -
 # Compter le nombre de résultats
 RESULT_COUNT=$(echo "$RESULTS" | wc -l)
 
-source script/bin/activ
+if [ "$RESULT_COUNT" -eq 1 ]; then
+    echo "Aucun résultat trouvé, arrêt du script."
+    exit 0
+fi
+
+source script/bin/active
 
 # Boucle basée sur la longueur du résultat
 for (( i=1; i<=$RESULT_COUNT; i++ ))
