@@ -1,0 +1,20 @@
+Installation des packets sur le windows server si vous ne possédez pas ldaps:
+OpenSSH server 
+    Documentation : https://www.it-connect.fr/installer-et-configurer-openssh-server-sur-windows-server-2019/
+
+Installation des packets sur la machine du script :
+apt install python3
+apt install python3-pip
+apt install mariadb-client 
+
+Création environnement python et utilisation de l'environnement : 
+python -m venv /path/to/new/virtual/environment
+source /path/to/virtual/environment
+
+Installation des packet :
+pip3 install PySys==2.2
+pip3 install PyYAML==6.0.1
+pip3 install requests==2.31.0
+pip3 install python-ldap==0.0.6
+pip3 install DateTime==5.4
+pip3 install paramiko==3.4.0
