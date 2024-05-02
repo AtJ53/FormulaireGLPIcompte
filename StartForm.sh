@@ -23,7 +23,7 @@ do
     # Extraction d'une ligne à la fois
     LINE=$(echo "$RESULTS" | sed -n "${i}p")
     
-    python3 $LINE
+    python3 /path/DSI-CreateCompte.py $LINE
     
     sleep 10m
 done
