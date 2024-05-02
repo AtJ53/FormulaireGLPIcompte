@@ -1,0 +1,39 @@
+API:
+  AppURL: "http://192.168.27.3/glpi/apirest.php"  
+  user_token: "ZnHVKpegCGH8rUU2JCmWdD4wKHP8NQQzOrVs4UY3"  
+  AuthorizationType: "user_token"
+  app_token: "TVtmZDeUHP3kcOPBmSPKUJ6b7VWOpSr9n9mkIQ15"
+
+AD:
+  Protocol: "ldap"
+  Serveur: "ldap://vm-cdom1"
+  utilisateur: "cn=adminaj,dc=gsb,dc=local"
+  password: "Corner654+"
+  basederecherche: "dc=gsb,dc=local"
+  ouprofil: "OU=Profil,OU=test,DC=gsb,DC=local"
+  mail: "atjindustry.local"
+
+Nomdesquestions:
+  Nomducollaborteur: "Nom du collaborateur"
+  Prenomducollaborateur : "Prénom du collaborateur"
+  Profils : "Profils"
+  typedecontrat : "Type de contrat"
+  DateArrive : "Date Arrivé"
+  Datedepart : "Date départ"
+
+SSH:
+  host : "192.168.27.1"
+  username : "adminaj"
+  password : "Corner654+"
+  scriptpowershell: "resetpassword.ps1"
+
+Profil:
+  Fabrication:
+    Nomdugroupe: e
+    OU: CN:test
+  DSI:
+    Nomdugroupe: Profil_DSI
+    OU: "OU=INFORMATIQUE,OU=test,DC=atjindustry,DC=local"
+  AdminSysRes:
+    Nomdugroupe: 
+    OU: "OU=INFORMATIQUE,OU=test,DC=atjindustry,DC=local"
