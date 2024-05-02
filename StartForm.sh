@@ -15,7 +15,7 @@ RESULTS=$(mysql -h "$HOST" -u "$USER" -p"$PASSWORD" "$DATABASE" -e "$QUERY" -s -
 # Compter le nombre de résultats
 RESULT_COUNT=$(echo "$RESULTS" | wc -l)
 
-python3 -m venv script/bin/activ
+source script/bin/activ
 
 # Boucle basée sur la longueur du résultat
 for (( i=1; i<=$RESULT_COUNT; i++ ))
