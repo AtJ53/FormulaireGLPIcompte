@@ -15,7 +15,7 @@ RESULTS=$(mysql -h "$HOST" -u "$USER" -p"$PASSWORD" "$DATABASE" -e "$QUERY" -s -
 # Compter le nombre de résultats
 RESULT_COUNT=$(echo "$RESULTS" | wc -l)
 
-if [ "$RESULT_COUNT" -eq 1 ]; then
+if [ "$RESULTS" -eq "" ]; then
     echo "Aucun résultat trouvé, arrêt du script."
     exit 0
 fi
