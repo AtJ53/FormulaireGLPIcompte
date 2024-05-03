@@ -231,7 +231,7 @@ except ldap.LDAPError as e:
 #Cette partie n'est pas obligatoire si votre ad est en ldaps
 import paramiko
 if AD['Protocol'] != "ldaps":
-    command = f"powershell -ExecutionPolicy Bypass -File {SSH['scriptpowershell']} {identifiant} {password}"
+    command = f"powershell -ExecutionPolicy Bypass -File {SSH['cheminscript']}{SSH['scriptpowershell']} {identifiant} {password}"
 
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
