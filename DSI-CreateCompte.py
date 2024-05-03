@@ -166,7 +166,7 @@ user_upn = f"{user_cn}@{AD['mail']}"
 #Génère le mot de passe aléatoire et l'encode
 letters = string.ascii_letters
 digits = string.digits
-punctuation = string.punctuation
+punctuation = '?!'
 password = [
     random.choice(letters),
     random.choice(digits),
