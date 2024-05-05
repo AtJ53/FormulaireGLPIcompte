@@ -15,7 +15,7 @@ RESULTS=$(mysql -h "$HOST" -u "$USER" -p"$PASSWORD" "$DATABASE" -e "$QUERY" -s -
 # Compter le nombre de résultats
 RESULT_COUNT=$(echo "$RESULTS" | wc -l)
 
-if [ "$RESULTS" -eq "" ]; then
+if [ "$RESULTS" -eq $null ]; then
     echo "Aucun résultat trouvé, arrêt du script."
     exit 0
 fi
@@ -30,5 +30,5 @@ do
     
     python3 /path/DSI-CreateCompte.py $LINE
     
-    sleep 10m
+    sleep 1m
 done
